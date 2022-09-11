@@ -1,0 +1,97 @@
+.module-list {
+  counter-reset: ol-counter;
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+}
+.module-list .ml__item {
+  list-style: none;
+  padding: 40px 20px;
+}
+.module-list .ml__item:not(:last-child) {
+  border-bottom: 1px solid #d2d2d2;
+}
+.module-list .ml__item .mli__content {
+  margin-left: 100px;
+  position: relative;
+}
+.module-list .ml__item .mli__content:before, .module-list .ml__item .mli__content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 100%;
+  font-weight: 300;
+  text-align: center;
+  width: 100px;
+  box-sizing: border-box;
+}
+.module-list .ml__item .mli__content:before {
+  content: "Module";
+  top: 0;
+  font-size: 0.9rem;
+}
+@media (min-width: 561px) and (max-width: 640px) {
+  .module-list .ml__item .mli__content:before {
+    font-size: 0.8rem;
+  }
+}
+.module-list .ml__item .mli__content:after {
+  content: counter(ol-counter) ":";
+  counter-increment: ol-counter;
+  top: 20px;
+  font-size: 2.5rem;
+}
+@media (min-width: 561px) and (max-width: 640px) {
+  .module-list .ml__item .mli__content:after {
+    font-size: 2.25rem;
+  }
+}
+.module-list .ml__item .mli__content h1 {
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  .module-list .ml__item .mli__content h1 {
+    font-size: 1.5rem;
+  }
+}
+.module-list .ml__item .mli__content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.module-list .ml__item .mli__content p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 560px) {
+  .module-list .ml__item .mli__content {
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .module-list .ml__item .mli__content:before, .module-list .ml__item .mli__content:after {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 560px) {
+  .module-list {
+    padding: 0;
+  }
+}
+body {
+  color: #111;
+  background: #e2e2e2;
+  font-family: Arial, "Open Sans";
+}
+.module-list {
+  max-width: 600px;
+}
+.module-list h1 a {
+  color: #111;	
+}
+.module-list h1 a:hover {
+  color: #3b83dc;	
+}
