@@ -31,5 +31,9 @@
 }
 
 .content li > a[href^="posts"]::after {
-	content: " » ";
+	content: " В» ";
+}
+
+.text-align__right {
+	text-align: right;
 }
