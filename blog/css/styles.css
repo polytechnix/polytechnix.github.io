@@ -37,3 +37,15 @@
 .text-align__right {
 	text-align: right;
 }
+
+ul.unordered-list {
+	margin-top: 25px;
+}
+
+ul.unordered-list li {
+	margin-left: 25px;
+}
+
+ul.unordered-list li::before {
+	content: " - ";
+}
